@@ -123,7 +123,7 @@ getPossibleMoves <- function(){
     } else{
       typeDesc <- "Shift"
       whichDesc <- paste0("column ", which)
-      shiftDesc <- ifelse(shift <= 4, paste0("down by ", shift), paste0("up by ", 8 - shift))
+      shiftDesc <- ifelse(shift <= 4, paste0("down towards centre by ", shift), paste0("up away from centre by ", 8 - shift))
     }
     return(paste0(typeDesc, " ", whichDesc, " ", shiftDesc))
   }

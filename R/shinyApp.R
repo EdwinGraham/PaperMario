@@ -8,8 +8,12 @@ ui <- fluidPage(
   
   # Buttons to indicate enemy positions
   fluidRow(
+    column(1, offset = 6, "1")
+  ),
+  fluidRow(
     column(1, offset = 5, checkboxInput("box112", "", value = FALSE)),
     column(1, offset = 0, checkboxInput("box101", "", value = FALSE)),
+    column(1, offset = 3, "2")
   ),
   fluidRow(
     column(1, offset = 1, checkboxInput("box111", "", value = FALSE)),
@@ -31,7 +35,8 @@ ui <- fluidPage(
   ),
   fluidRow(
     column(1, offset = 4, checkboxInput("box411", "", value = FALSE)),
-    column(1, offset = 2, checkboxInput("box402", "", value = FALSE))
+    column(1, offset = 2, checkboxInput("box402", "", value = FALSE)),
+    column(1, offset = 3, "3")
   ),
   fluidRow(
     column(1, offset = 0, checkboxInput("box110", "", value = FALSE)),
@@ -55,7 +60,8 @@ ui <- fluidPage(
   ),
   fluidRow(
     column(1, offset = 4, checkboxInput("box408", "", value = FALSE)),
-    column(1, offset = 2, checkboxInput("box405", "", value = FALSE))
+    column(1, offset = 2, checkboxInput("box405", "", value = FALSE)),
+    column(1, offset = 3, "4")
   ),
   fluidRow(
     column(1, offset = 3, checkboxInput("box308", "", value = FALSE)),
@@ -78,6 +84,10 @@ ui <- fluidPage(
   fluidRow(
     column(1, offset = 5, checkboxInput("box107", "", value = FALSE)),
     column(1, offset = 0, checkboxInput("box106", "", value = FALSE)),
+    column(1, offset = 3, "5")
+  ),
+  fluidRow(
+    column(1, offset = 6, "6")
   ),
   
   # Number of moves
