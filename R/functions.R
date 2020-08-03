@@ -1,10 +1,10 @@
 # Function to check if layout is battle ready
 checkBattleReady <- function(mat){
-  # Check number of enem
+  # Check number of enemies
   matSum <- sum(mat)
   
   # Empty or full matrices are ready
-  if (matSum %in% c(0, 48)){
+  if (matSum %in% c(0, 47, 48)){
     return(TRUE)
   } else{
     remainder <- matSum %% 4
@@ -71,10 +71,15 @@ checkBattleReady <- function(mat){
     return(TRUE)
   }
   
-  # Finally need to check that remaining enemies are in consecutive colums
+  # Finally need to check that remaining enemies are in consecutive columns
+  # and rows 1 and 2 are empty
   lastCols <- which(colSums(mat) > 0)
   if ((max(lastCols) - min(lastCols)) %in% c(1, 11)){
-    return(TRUE)
+    if (sum(mat[1:2, ]) == 0){
+      return(TRUE)
+    } else{
+      return(FALSE)
+    }
   } else{
     return(FALSE)
   }
